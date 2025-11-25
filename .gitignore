@@ -1,0 +1,8 @@
+pytorch_model/__pycache__/*
+*.onnx
+*.ipynb
+*.db
+DEPLOYED_FROM_RUN.txt
+/mlruns
+.env
+*pyc
