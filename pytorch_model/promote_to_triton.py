@@ -11,7 +11,7 @@ from mlflow.tracking import MlflowClient
 # ------------------------
 EXPERIMENT_NAME = os.getenv("MLFLOW_EXPERIMENT_NAME", "ml-pipeline-triton-deploy")
 TRACKING_URI = os.getenv("MLFLOW_TRACKING_URI", "http://localhost:5000")
-TRITON_MODEL_DIR = Path(os.getenv("TRITON_MODEL_DIR", "../serving/triton/model_repository/simple"))
+TRITON_MODEL_DIR = Path(os.getenv("TRITON_MODEL_DIR", "/home/mch-jo/workspace/ml-pipeline-triton-deploy/serving/triton/model_repository/simple"))
 MLFLOW_ARTIFACT_ONNX = "model/simple.onnx"
 
 def main():
