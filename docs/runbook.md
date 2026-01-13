@@ -23,7 +23,7 @@ docker run --rm --gpus all nvidia/cuda:11.4.3-base-ubuntu20.04 nvidia-smi
 Start Triton server:
 
 ```bash
-docker compose -f serving/triton/compose.yml up -d
+docker compose -f serving/triton/compose.yaml up -d
 ```
 
 Verify health:
@@ -41,7 +41,7 @@ OK
 Platform Shutdown
 
 ```bash
-docker compose -f serving/triton/compose.yml down
+docker compose -f serving/triton/compose.yaml down
 ```
 
 Start MLflow Server
@@ -110,3 +110,5 @@ nvidia-smi
 - Are GPUs visible inside the container?
 - Is the model repository mounted correctly?
 - Are models loading successfully?
+
+See `docs/troubleshooting.md` for detailed procedures.
