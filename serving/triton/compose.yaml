@@ -27,3 +27,14 @@ services:
       - "8000:8000"
       - "8001:8001"
       - "8002:8002"
+  client:
+    build:
+      context: ..
+      dockerfile: client/Dockerfile
+    environment:
+      TRITON_URL: triton:8000
+      TRITON_MODEL: simple
+      TRITON_INPUT: input
+      TRITON_OUTPUT: output
+    depends_on:
+      - triton
