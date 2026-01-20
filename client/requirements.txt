@@ -1,2 +1,5 @@
 nvidia-pyindex
 tritonclient[all]
+numpy
+pytest
+pytest-timeout
