@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: triton-client-tests
+spec:
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: tests
+        image: triton-client-tests:0.1
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: TRITON_URL
+          value: "triton.default.svc.cluster.local:8000"
+        - name: TRITON_MODEL
+          value: "simple"
+        - name: TRITON_INPUT
+          value: "input"
+        - name: TRITON_OUTPUT
+          value: "output"
