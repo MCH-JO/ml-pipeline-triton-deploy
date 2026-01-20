@@ -6,3 +6,4 @@ DEPLOYED_FROM_RUN.txt
 /mlruns
 .env
 *pyc
+.venv/*
